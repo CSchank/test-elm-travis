@@ -8,5 +8,7 @@ jobs:
       name: "Elm Format Validation"
     - script: elm-test
       name: "Elm-Test Test Run"
+    - stage: deploy
+      script: echo "Hello World!"
 stages:
   - test
