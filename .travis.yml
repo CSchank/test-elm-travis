@@ -4,8 +4,9 @@ before_install:
 jobs:
   include:
     - stage: test
-      script: 
-        - elm-format --validate .
-        - elm-test
+      name: "Elm Format Validation"
+      script: elm-format --validate .
+      name: "Elm-Test Test Run"
+      script: elm-test
 stages:
   - test
