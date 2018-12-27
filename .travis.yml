@@ -12,4 +12,5 @@ jobs:
       script: echo "Hello World!"
 stages:
   - test
-  - deploy
+  - name: deploy
+    if: branch = master
