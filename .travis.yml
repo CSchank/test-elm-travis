@@ -12,3 +12,4 @@ jobs:
       script: echo "Hello World!"
 stages:
   - test
+  - deploy
