@@ -8,8 +8,8 @@ import Test exposing (..)
 suite : Test
 suite =
     describe "A simple test of comparisons"
-        [
-            test "comparison of strings" <|
-                (\_ -> "Hello"
-                    |> Expect.equal "Hello")
+        [ test "comparison of strings" <|
+            \_ ->
+                "Hello"
+                    |> Expect.equal "Hello"
         ]
