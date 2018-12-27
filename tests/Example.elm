@@ -7,4 +7,9 @@ import Test exposing (..)
 
 suite : Test
 suite =
-    todo "Implement our first test. See https://package.elm-lang.org/packages/elm-explorations/test/latest for how to do this!"
+    describe "A simple test of comparisons"
+        [
+            test "comparison of strings" <|
+                (\_ -> "Hello"
+                    |> Expect.equal "Hello")
+        ]
