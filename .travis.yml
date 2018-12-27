@@ -13,4 +13,4 @@ jobs:
 stages:
   - test
   - deploy
-  if: branch = master
+    if: branch = master
