@@ -9,6 +9,9 @@ type alias Model =
     { count : Int }
 
 
+x = 0
+
+
 initialModel : Model 
 initialModel =
     { count = 0 }
