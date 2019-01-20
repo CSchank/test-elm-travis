@@ -4,7 +4,10 @@ before_install:
 jobs:
   include:
     - stage: test
-      script: elm-format --validate .
+      script: 
+        - elm-format --validate .
+        - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
+        - echo "$CHANGED_FILES"
       name: "Elm Format Validation"
     - script: elm-test
       name: "Elm-Test Test Run"
