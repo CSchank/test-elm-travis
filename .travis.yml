@@ -6,6 +6,7 @@ jobs:
     - stage: test
       script: 
         - elm-format --validate .
+        - echo "$TRAVIS_COMMIT_RANGE"
         - CHANGED_FILES=($(git diff --name-only $TRAVIS_COMMIT_RANGE))
         - echo "$CHANGED_FILES"
       name: "Elm Format Validation"
